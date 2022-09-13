@@ -1,6 +1,7 @@
 package coplit;
 
-import java.util.Scanner;
+import java.util.*;
+import java.util.function.Function;
 
 /*
 문제
@@ -25,9 +26,24 @@ HashMap<String, String> output = transformFirstAndLast(arr);
 System.out.println(output); // --> { Kevin : 'Spacey'}
 
  */
-public class Question1_transformFirstAndLast {
-    Scanner scanner = new Scanner(System.in);
-    String arr = scanner.next();
-
-
-}
+//public class Question1_transformFirstAndLast {
+//    public static void main(String[] args) {
+//
+//
+//        //HashMap(key, value)로 구성되며 순서가 없다. key는 중복 불가, value는 중복 허용
+//        //HashMap을 순서를 유지하려면 LikedHashMap클래스를 사용하면 된다
+//        //Hashing 기법으로 만들어진다
+//        //HashMap map = new HasgMap(); / map.put("key", "value"); / 저장에 put를 사용한다
+//        //key,value 한쌍을 entry라고 한다 /
+//        HashMap[] arr = new HashMap[]{};  //arr 인자에 key,value 값 HashMap 생성
+//        arr.put("index=0", "index=last")
+//        Scanner sc = new Scanner(System.in);
+//           String map = sc.next();
+//
+//            if (arr.length == 0) return null;
+//            HashMap<String, String> result = new HashMap<>();
+//            result.put(arr[0], arr[arr.length - 1]);
+//            return result;
+//        }
+//    }
+//}

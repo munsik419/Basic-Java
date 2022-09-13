@@ -6,11 +6,11 @@ public class Test_ListCollection_size_indexof_contains_isEmpty {
     public static void main(String[] args) {
 
         //Dog 객체로 이루어진 ArrayList를 만들어 mylist의 참조변수에 담는다
-        ArrayList<Test_ListCollection.Dog> myList = new ArrayList<Test_ListCollection.Dog>();
+        ArrayList<Dog> myList = new ArrayList<Dog>();
 
         //d,e 객체를 생성한다
-        Test_ListCollection.Dog d = new Test_ListCollection.Dog();
-        Test_ListCollection.Dog e = new Test_ListCollection.Dog();
+        Dog d = new Dog();
+        Dog e = new Dog();
 
         //add 함수로 객체를 ArrayList에 추가한다
         myList.add(d);
