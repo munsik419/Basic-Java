@@ -13,7 +13,7 @@ public class HashMap_IdPw {
 
         Scanner scanner = new Scanner(System.in);
 
-        while (true) {
+        while (true) {  //반복문을 실행
             System.out.println("Id와 Pw를 입력하세요");
             System.out.println("Id : ");
             String id = scanner.nextLine().trim();  //trim 은 앞 뒤 공백을 없애준다
@@ -29,7 +29,7 @@ public class HashMap_IdPw {
 
             if (!map.get(id).equals(pw)) {  //get(id)는 key 값 중에 id와 일치하는 값이 있으면  value 값을 반환한다
                 System.out.println("비밀번호가 일치하지 않습니다" + "\n" + "다시 입력해 주시기 바랍니다");
-            } else {
+            } else {  //id와 pw가 일치하면 문장 출력 후 반복문 털출
                 System.out.println("id와 비밀번호가 일치합니다");
                 break;
             }

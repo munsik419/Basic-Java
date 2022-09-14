@@ -1,7 +1,8 @@
 package coplit;
 
 import java.util.*;
-import java.util.function.Function;
+
+import static java.lang.String.valueOf;
 
 /*
 문제
@@ -26,24 +27,49 @@ HashMap<String, String> output = transformFirstAndLast(arr);
 System.out.println(output); // --> { Kevin : 'Spacey'}
 
  */
-//public class Question1_transformFirstAndLast {
-//    public static void main(String[] args) {
-//
-//
-//        //HashMap(key, value)로 구성되며 순서가 없다. key는 중복 불가, value는 중복 허용
-//        //HashMap을 순서를 유지하려면 LikedHashMap클래스를 사용하면 된다
-//        //Hashing 기법으로 만들어진다
-//        //HashMap map = new HasgMap(); / map.put("key", "value"); / 저장에 put를 사용한다
-//        //key,value 한쌍을 entry라고 한다 /
-//        HashMap[] arr = new HashMap[]{};  //arr 인자에 key,value 값 HashMap 생성
-//        arr.put("index=0", "index=last")
-//        Scanner sc = new Scanner(System.in);
-//           String map = sc.next();
-//
-//            if (arr.length == 0) return null;
-//            HashMap<String, String> result = new HashMap<>();
-//            result.put(arr[0], arr[arr.length - 1]);
-//            return result;
+public class Question1_transformFirstAndLast {
+    public static void main(String[] args) {
+
+
+//        String[] arr = new String[100];
+
+//        HashMap<String, String> result = new HashMap<String, String>();
+
+        //입력받을 데이터의 개수를 입력받는다
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("입력받을 문자의 개수는?(100개 이하)");
+        int count = sc.nextInt();
+
+        //배열에 들어갈 문자열을 입력한다
+        System.out.println(count + "개의 문자를 입력하세요");
+        String[] arr = new String[100];
+        for (int i = 0; i < count; ++i) {//
+            arr[i] = sc.nextLine();
+        }
+//        String[] arr = new String[100];
+
+        //저장된 배열의 데이터 중에서 첫번째와 마지막 데이터를 key와 value 로 저장한다
+        HashMap result = new HashMap();
+
+        //배열의 첫번째와 마지막 값을 key와 value로 저장한다
+            result.put(arr[0], arr[arr.length - 1]);
+//        int i = 0;
+//        for (String str : arr) {  //배열 arr의 값을 str 변수에 대입한다
+//            isStringEmpty(true, null); //대입된 값의 길이 index가 0이면
+//            i++;
+        //저장된 값을 출력한다
+            System.out.println(result);
+        }
+    }
+
+
+//        static boolean isStringEmpty (String arr){
+//            System.out.println("null");
+//            return arr == null;
 //        }
 //    }
-//}
+
+
+
+
