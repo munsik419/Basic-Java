@@ -2,7 +2,7 @@ package commandmethod;
 
 import java.util.ArrayList;
 
-public class Test_ListCollection_size_indexof_contains_isEmpty {
+public class ListCollection_size_indexof_contains_isEmpty {
     public static void main(String[] args) {
 
         //Dog 객체로 이루어진 ArrayList를 만들어 mylist의 참조변수에 담는다

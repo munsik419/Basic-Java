@@ -1,6 +1,6 @@
 package commandmethod;
 
-public class StringReplace {
+public class String_Replace {
     public static void main(String[] args) {
 
         //하나의 문자를 변경

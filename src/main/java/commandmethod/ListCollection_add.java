@@ -2,7 +2,7 @@ package commandmethod;
 
 import java.util.ArrayList;
 
-public class Test_ListCollection_Add {
+public class ListCollection_add {
     public static void main(String[] args) {
 
         ArrayList<Integer> arrList = new ArrayList<Integer>();
