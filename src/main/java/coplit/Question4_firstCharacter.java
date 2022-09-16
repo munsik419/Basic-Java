@@ -22,5 +22,25 @@ output = firstCharacter("The community at Code States might be the biggest asset
 System.out.println(output); // --> "TcaCSmbtba"
  */
 
+import java.util.Scanner;
+
 public class Question4_firstCharacter {
+    public static void main(String[] args) {
+        //문자열을 입력받는다
+        Scanner sc = new Scanner(System.in);
+        String word = sc.nextLine();
+
+        //문자열을 ""를 기준으로 배열로 변환한다
+        String[] wordArr = word.split(" ");
+
+
+        //배열 길이만큼 반복하며 단어의 첫번째 문자를 구한다
+        for (int i=0; i< wordArr.length; i++) {
+
+            char firstArr = wordArr[i].charAt(0);
+
+            System.out.print(firstArr);
+
+        }
+    }
 }
