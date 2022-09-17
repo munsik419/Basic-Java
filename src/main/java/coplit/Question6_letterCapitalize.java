@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static java.util.regex.Pattern.CASE_INSENSITIVE;
 
 /*
 문제
@@ -38,11 +42,27 @@ public class Question6_letterCapitalize {
         String arr[] = words.split(" ");
 
         //조건 생성
-        if(arr.length == 0 || words.isBlank()) {
-            bw.write(words);
+        if(arr.length == 0 || words.isBlank()) {  //빈 문자열이거나 공백이면
+
+            bw.write(words);  //그대로 출력한다
+
         } else {
-//            String changeWords = words.toUpperCase(0,0);
-//            bw.write(changeWords);
+            Pattern pattern = Pattern.compile("([a-z])([a-z]*)");  //모든 문자열에 대한 정규식
+
+            Matcher matcher = pattern.matcher(words);  //pattern과 일치하는 문자열을 찾아서 객체에 전달
+
+            //위의 두 코드를 하나로 합칠 수 있다
+//            Matcher match = Pattern.compile("([a-z])([a-z]*)", Pattern.CASE_INSENSITIVE).matcher(words);
+
+            StringBuffer str = new StringBuffer();  //변경한 문자열을 저장할 공간을 생성한다
+
+            while (matcher.find()) {  //matcher.find()) 메서드로 매칭되는 위치로 이동한다
+
+                //appendReplacement 메서드로 (str, 바꿀 문자열)을 통해 바뀐 문자열을 str에 저장한다
+                matcher.appendReplacement(str, matcher.group(1).toUpperCase() + matcher.group(2).toLowerCase());
+            }
+            matcher.appendTail(str);  //더이상 찾을 문자열이 없으므로 꼬리를 붙이기 위한 메서드를 사용한다
+            bw.write(str.toString());  //str 값을 String으로 변환하여 출룍한다
         }
         bw.flush();//남아있는 데이터를 모두 출력
         bw.close();//스트림 닫음
