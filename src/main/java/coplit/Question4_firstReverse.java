@@ -23,11 +23,15 @@ public class Question4_firstReverse {
     public static void main(String[] args) {
 
         //문자열을 입력받는다
-
-        StringBuffer sc = new StringBuffer();
-        sc.append("Hello welcome to develop world!");
+        Scanner sc = new Scanner(System.in);
+        String words = sc.nextLine();
 
         //입력받은 문자열을 뒤집는다
-        System.out.println(sc.reverse());
+        StringBuffer sb = new StringBuffer(words);  //StringBuffer : 생성자의 파라미터로 문자열을 입력받는다
+        String wordsReverse = sb.reverse().toString();  //reverse() 메서드로 객체의 reference를 반환한다
+//        String wordsReverse = String.valueOf(sb.reverse()); sb.reverse().toString();와 같은 결과 값 반환
+
+        System.out.println(wordsReverse);
     }
 }
+
