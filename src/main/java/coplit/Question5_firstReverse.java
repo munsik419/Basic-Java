@@ -19,7 +19,7 @@ System.out.println(output); // "setatsedoc evol I"
 
 import java.util.Scanner;
 
-public class Question4_firstReverse {
+public class Question5_firstReverse {
     public static void main(String[] args) {
 
         //문자열을 입력받는다
