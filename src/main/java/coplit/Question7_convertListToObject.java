@@ -62,3 +62,4 @@ public class Question7_convertListToObject {
         System.out.println(""+result.keySet()+""+"="+result.values()+"");
     }
 }
+//출력이 오류남....객체 주소가 출력됨
